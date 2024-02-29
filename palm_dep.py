@@ -8,11 +8,7 @@ headers = {"myHeaders": "your_header_value"}
 # Replace with the prompt you want to send
 
 with open("buggy_code1.py", "r") as file:
-    # Read the entire file as a string
     code_contents = file.read()
-
-    # Print or process the code as needed
-    # print(code_contents)
 
 prompt = {
     "text": code_contents+'''eval(input()) Give a recommendation for making this code more secure:\n
