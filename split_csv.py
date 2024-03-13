@@ -19,8 +19,6 @@ def yield_from_index(csv_reader):
 
 with open(filename, 'r+') as f:
     reader = csv.reader(fix_nulls(f))
-    #print(next(lazy_print(f)))
     for item in islice(yield_from_index(reader), 2002, 4000):
         print(len(item))
-    #print(next(yield_from_index(reader)))
 
